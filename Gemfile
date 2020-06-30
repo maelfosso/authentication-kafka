@@ -48,3 +48,7 @@ group :test do
   gem 'faker'
   gem 'database_cleaner'
 end
+
+gem 'bcrypt'
+gem 'jwt'
+
