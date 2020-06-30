@@ -33,5 +33,8 @@ module Accounts
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    config.mongoid.logger = Logger.new($stdout, :warn)
+    config.mongoid.preload_models = false
   end
 end
