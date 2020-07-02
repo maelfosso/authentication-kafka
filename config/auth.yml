@@ -1,0 +1,13 @@
+development:
+  public_key: <%= "#{Rails.root}/config/keys/jwt-nkapsi-RS256.key.pub" %>
+  private_key: <%= "#{Rails.root}/config/keys/jwt-nkapsi-RS256.key" %>
+
+test:
+  public_key: <%= "#{Rails.root}/config/keys/jwt-nkapsi-RS256.key.pub" %>
+  private_key: <%= "#{Rails.root}/config/keys/jwt-nkapsi-RS256.key" %>
+
+
+production:
+  public_key: <%= "#{Rails.root}/config/keys/jwt-nkapsi-RS256.key.pub" %>
+  private_key: <%= "#{Rails.root}/config/keys/jwt-nkapsi-RS256.key" %>
+

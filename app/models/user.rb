@@ -11,6 +11,10 @@ class User
 
   validates_presence_of :name, :email, :phone, :password_digest
 
+  def for_jwt
+    return { id: self.id, name: self.name, email: self.email, phone: self.phone }
+  end
+
 end
 
 class Business < User

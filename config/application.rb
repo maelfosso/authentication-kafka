@@ -36,5 +36,8 @@ module Accounts
 
     config.mongoid.logger = Logger.new($stdout, :warn)
     config.mongoid.preload_models = false
+
+    config.auth = config_for(:auth)
+    
   end
 end
