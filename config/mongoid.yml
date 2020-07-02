@@ -5,7 +5,7 @@ development:
     default:
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
-      database: accounts_development
+      database: nkapsi_accounts_development
       # Provides the hosts the default client can connect to. Must be an array
       # of host:port pairs. (required)
       hosts:
@@ -155,7 +155,7 @@ development:
 test:
   clients:
     default:
-      database: accounts_test
+      database: nkapsi_accounts_test
       hosts:
         - localhost:27017
       options:

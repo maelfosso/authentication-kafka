@@ -37,3 +37,18 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Working with MongoDB
 gem 'mongoid', '~> 7.0.5'
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.5'
+end
+
+group :test do
+  gem 'factory_bot_rails'
+  gem 'shoulda-matchers', '~> 4.0'
+  gem 'faker'
+  gem 'database_cleaner'
+end
+
+gem 'bcrypt'
+gem 'jwt'
+
