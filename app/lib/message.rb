@@ -4,7 +4,7 @@ class Message
   end
 
   def self.invalid_credentials
-    'Invalid credentitals'
+    'Invalid credentials'
   end
 
   def self.invalid_token
