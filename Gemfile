@@ -51,4 +51,6 @@ end
 
 gem 'bcrypt'
 gem 'jwt'
-gem 'ruby-kafka'
+# gem 'ruby-kafka'
+gem 'waterdrop'
+gem 'karafka'
