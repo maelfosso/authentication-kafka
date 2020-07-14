@@ -1,7 +1,5 @@
 # # frozen_string_literal: true
 
-# # require_relative './app/consumers/business_consumer'
-
 ENV['RAILS_ENV'] ||= 'development'
 ENV['KARAFKA_ENV'] = ENV['RAILS_ENV']
 require ::File.expand_path('../config/environment', __FILE__)
