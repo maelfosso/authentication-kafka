@@ -14,9 +14,12 @@ if Rails.env.development?
   )
 end
 
+KAFKA_HOSTNAME = ENV['KAFKA_HOSTNAME'] || '192.168.8.101'
+KAFKA_PORT = ENV['KAFKA_PORT'] || '9092'
+
 class KarafkaApp < Karafka::App
   setup do |config|
-    config.kafka.seed_brokers = %w[kafka://192.168.8.102:9092]
+    config.kafka.seed_brokers = %W[kafka://#{KAFKA_HOSTNAME}:#{KAFKA_PORT}]
     config.client_id = 'nkapsi_accounts_development'
     config.logger = Rails.logger
   end
@@ -25,9 +28,9 @@ class KarafkaApp < Karafka::App
   # interested in logging events for certain environments. Since instrumentation
   # notifications add extra boilerplate, if you want to achieve max performance,
   # listen to only what you really need for given environment.
-  # Karafka.monitor.subscribe(WaterDrop::Instrumentation::StdoutListener.new)
-  # Karafka.monitor.subscribe(Karafka::Instrumentation::StdoutListener.new)
-  # Karafka.monitor.subscribe(Karafka::Instrumentation::ProctitleListener.new)
+  Karafka.monitor.subscribe(WaterDrop::Instrumentation::StdoutListener.new)
+  Karafka.monitor.subscribe(Karafka::Instrumentation::StdoutListener.new)
+  Karafka.monitor.subscribe(Karafka::Instrumentation::ProctitleListener.new)
 
   # Uncomment that in order to achieve code reload in development mode
   # Be aware, that this might have some side-effects. Please refer to the wiki
